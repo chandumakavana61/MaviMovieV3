@@ -1,14 +1,20 @@
-#MaviMods
-
+# Base image
 FROM python:3.10.8-slim-buster
 
-RUN apt update && apt upgrade -y
-RUN apt install git -y
-COPY requirements.txt /requirements.txt
+# Install system dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /MaviMovieV3
-WORKDIR /MaviMovieV3
-COPY . /MaviMovieV3
+# Set working directory
+WORKDIR /app
+
+# Copy dependencies and install
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all project files
+COPY . /app
+
+# Default command to run your bot
 CMD ["python", "bot.py"]
