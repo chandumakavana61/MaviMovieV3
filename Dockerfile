@@ -1,5 +1,5 @@
-# Base image
-FROM python:3.10.8-slim-buster
+# Newer base image (buster पुराना हो गया)
+FROM python:3.10-slim-bullseye
 
 # Install system dependencies
 RUN apt-get update && \
@@ -16,5 +16,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy all project files
 COPY . /app
 
-# Default command to run your bot
+# Start your bot
 CMD ["python", "bot.py"]
