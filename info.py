@@ -22,7 +22,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "7750075049:AAGlAVUzE2G1Trp5SHG33fdFwZjGGKM
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/504babe67ae701cb458f8.jpg https://telegra.ph/file/504babe67ae701cb458f8.jpg')).split() #SAMPLE PIC
-NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/504babe67ae701cb458f8.jpg")
+NOR_IMG = environ.get("NOR_IMG", "https://4.downloader.disk.yandex.com/preview/8cb425afd3d83515bc45568d5c6dfbef684d48d4c7c70c9d2cbff12d307ea5e3/inf/rxxQJPsOQc6gDZQRi5oBHCAIcNQn97pbiq_yjfnNqlJJO9ibNke0xsZUTPKIrYj-NtLYvRNoL35IaSCM9DK2nw%3D%3D?uid=2229710540&filename=movie%20ka%20mela%20logo.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=2229710540&tknv=v3&size=1897x877")
 MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/How_To_Open_Linkl")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
 
